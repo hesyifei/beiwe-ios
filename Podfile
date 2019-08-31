@@ -19,6 +19,7 @@ target 'Beiwe' do
   pod 'Hakuba', :git => 'https://github.com/eskizyen/Hakuba.git', :branch => 'Swift3'
   pod 'XLActionController'
   pod 'XCGLogger', '~> 7.0.0'
+  pod "SearchTextField"
 
 end
 
