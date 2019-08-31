@@ -30,7 +30,7 @@ PODS:
     - PromiseKit/CorePromise
   - ReachabilitySwift (3)
   - ResearchKit (1.5.2)
-  - SearchTextField (1.2.4)
+  - SearchTextField (1.2.1)
   - SwiftValidator (4.0.0)
   - XCGLogger (7.0.0):
     - XCGLogger/Core (= 7.0.0)
@@ -55,7 +55,7 @@ DEPENDENCIES:
   - PromiseKit
   - ReachabilitySwift (~> 3)
   - ResearchKit
-  - SearchTextField
+  - SearchTextField (= 1.2.1)
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
   - XCGLogger (~> 7.0.0)
   - XLActionController
@@ -129,11 +129,11 @@ SPEC CHECKSUMS:
   PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   ResearchKit: a5770681dd61afddd3d1f24d232b9abf00cba454
-  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
+  SearchTextField: 261b0febd49194492f29555fff3c5c0019ca84d2
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
   XLActionController: 007868251c0eed70d649d06c1625259b73b3a600
 
-PODFILE CHECKSUM: 151ad946f5c1f37f7dda712719238873dc209edf
+PODFILE CHECKSUM: 4c2830acaa4ec8bb656eb92da6510e512586c6cc
 
 COCOAPODS: 1.7.5
