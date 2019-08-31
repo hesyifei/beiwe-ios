@@ -82,6 +82,7 @@ class TrackingSurveyPresenter : NSObject, ORKTaskViewControllerDelegate {
                     questionStep.answerFormat = ORKTextAnswerFormat.choiceAnswerFormat(with: questionType == .RadioButton ? .singleChoice : .multipleChoice, textChoices: question.selectionValues.enumerated().map { (index, el) in
                         return ORKTextChoice(text: el.text, value: index as NSNumber)
                         })
+					break
                 case .FreeResponse:
                     let questionStep = ORKQuestionStep(identifier: question.questionId);
                     step = questionStep;
@@ -92,16 +93,21 @@ class TrackingSurveyPresenter : NSObject, ORKTaskViewControllerDelegate {
                             textFormat.multipleLines = false;
                             questionStep.answerFormat = textFormat;
 							step = ORKTouchAnywhereStep(identifier: question.questionId, instructionText: "WELFJKNJNEFWJNKEWF")
+							break
                         case .Numeric:
                             questionStep.answerFormat = ORKNumericAnswerFormat.init(style: .decimal, unit: nil, minimum: question.minValue as NSNumber?, maximum: question.maxValue as NSNumber?)
+							break
                         case .MultiLine:
                             let textFormat = ORKTextAnswerFormat.textAnswerFormat();
                             textFormat.multipleLines = true;
                             questionStep.answerFormat = textFormat;
+							break
                         }
                     }
+					break
                 case .InformationText:
                     step = ORKInstructionStep(identifier: question.questionId);
+					step = SearchTextFieldStep(identifier: question.questionId)
                     break;
                 case .Slider:
                     if let minValue = question.minValue, let maxValue = question.maxValue {
