@@ -91,6 +91,7 @@ class TrackingSurveyPresenter : NSObject, ORKTaskViewControllerDelegate {
                             let textFormat = ORKTextAnswerFormat.textAnswerFormat();
                             textFormat.multipleLines = false;
                             questionStep.answerFormat = textFormat;
+							step = ORKTouchAnywhereStep(identifier: question.questionId, instructionText: "WELFJKNJNEFWJNKEWF")
                         case .Numeric:
                             questionStep.answerFormat = ORKNumericAnswerFormat.init(style: .decimal, unit: nil, minimum: question.minValue as NSNumber?, maximum: question.maxValue as NSNumber?)
                         case .MultiLine:
@@ -455,6 +456,8 @@ class TrackingSurveyPresenter : NSObject, ORKTaskViewControllerDelegate {
             case "confirm":
                 stepViewController.continueButtonTitle = "Confirm";
             default:
+				stepViewController.backButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: stepViewController.backButtonItem?.target, action: #selector(stepViewController.goBackward))
+
                 if let question = questionIdToQuestion[identifier] {
                     currentQuestion = question;
                     if (activeSurvey?.bwAnswers[identifier] == nil) {
